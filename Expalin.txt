@@ -102,7 +102,23 @@ HTML ==> 5
    colspan :: in table id we want to marg multiple columns of one row
    rowspan :: in table id we want to marg multiple row of one column
 
+-------------------------------------- DAY-4 --------------------------
 # forms
 # layout element
 # more element
 
+---------------------------------------- CSS DAY-5 ------------------------
+
+CSS ==> Cascading Style Sheet
+version ==> 3 (2002) ==> 2023
+    Browser CSS ==> Default
+    Custom CSS ==> which developer provides
+
+in html 3 ways to write a css
+    inline css   ==> style=  is an attribute
+        style="background-color: red;"
+        attr = "property : value"
+        property are predefined
+
+    internal css ==> <style> is an element
+    external ==> style.css  is an file
