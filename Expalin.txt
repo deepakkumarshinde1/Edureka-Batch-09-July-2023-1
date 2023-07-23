@@ -1,0 +1,108 @@
+Deepakkumar 
+
+    Fullstack Web Development    Internship Program
+    MERN Stack
+
+    Fullstack Developer ==> All About ==> FE + BE + DB
+
+    # FrontEnd ==> Visible Area ==> User Interface
+        HTML (v5)  ==> Create a structure/skeleton of web page
+        CSS (v3) ==> Design a web page e.g button ==> 10 line code
+            Bootstrap (v5.3) ==> framework ==> button ==> 1 line code 
+        JS (ES5 , ES6) ==> Make a web page interactive ==> button click ==> 5 line
+            React (v18) ==> library ==> button click ==> 1 or 2 line
+
+    # BackEnd ==> Server Side Development
+        ==> Node JS(v18) ==> Runtime Environment ==> to run a javascript
+        ==> Create Server ==> Server Files , data to Browser
+        ==> upload ==> 20 line code
+        ==> Express JS (4.7) == Framework of Node JS ==> 5-6 line
+
+FE <=====> BE <=====> Database
+
+    # Database (store data)
+    SQl ==> DBs
+    NoSql ==> DBs ==> Mongodb (v6+)
+
+    One Language ==> Browser ==> Javascript
+
+MongoDB  => M
+Express  => E
+React    => R
+NODEJS   => N
+
+MERN Full Stack Developer Stack 
+
+Training  ==> Sat & Sun 5.00 PM to 6.00 PM (IST) 4hrs
+Mentor ==> 2hr 
+
+
+8 Assignments
+4 mini project
+1 Major Project (Zomato Clone)
+GIT
+
+Deployment 
+
+LMS ==> 
+
+
+------------------- DAY-1 --------------------
+install text editor
+    vs code mac, linux , window ( >= win 8)
+    https://code.visualstudio.com/download
+    
+understand about web page 
+how a website works
+    Server  <== request === Client
+    Server  == response ===> Client
+
+
+create 1st web page 
+
+HTML ==> HyperText Markup Language
+
+HyperText ==> Sym + Text 
+          ==> Ability to move from 1 page to other
+
+Markup ==> Syntax
+
+<NameOfMarkup> ==> Open Tag
+</NameOfMarkup> ==> Close Tag
+
+<NameOfMarkup /> ==> Self Closing Tag
+
+
+<NameOfMarkup> Data </NameOfMarkup>
+
+<NameOfMarkup  Data />
+
+------------------------------ DAY-2 -------------------------------------
+
+HTML ==> 5
+
+# type of element
+    block level  ==> always start from new line
+    inline element ==> don't break line
+# typography
+    h1 ... h6
+    p 
+    b , i , u
+# button
+# navigation
+
+---------------------------- Day
+# list
+    ordered list
+        1,2,3,4,5
+        a,b,d,c
+    unordered list
+        * , * , * 
+# tables
+   colspan :: in table id we want to marg multiple columns of one row
+   rowspan :: in table id we want to marg multiple row of one column
+
+# forms
+# layout element
+# more element
+

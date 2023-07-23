@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>List</title>
+  </head>
+  <body>
+    <h1>Tables</h1>
+    <!-- table 
+            thead ==> table head
+                tr ==> table row
+                    th ==> table heading
+            tbody ==> table data
+                tr
+                    td ==> table data
+            tfoot ==> table summery
+                tr
+                    td
+                    th
+    -->
+    <table border="1" width="100%" cellspacing="0" cellpadding="10">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Full Name</th>
+          <th>Position</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td align="right">Bill Gates</td>
+          <td>Founder Microsoft</td>
+          <td rowspan="3">Salary</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td align="right">Bill Gates</td>
+          <td>Founder Microsoft</td>
+          <!-- <td>Salary</td> -->
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Bill Gates</td>
+          <td>Founder Microsoft</td>
+          <!-- <td>Salary</td> -->
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <!-- <td></td>
+          <td></td> -->
+          <td colspan="3" align="right">Total Count</td>
+          <td>3</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+Web Development ==> logic is build on web browser
+Chrome
+Firefox
+
+Server <==========> Client
+Full Stack Web  Development program ==> Front (design) + Backend + Database
+
+Front End ==> Working on browser
+    3 major pillars 
+        HTML (5) ==> Create structure (skeleton) of webpage
+        CSS (3) ==> Design a web page (design one button) ==> 5 
+            Bootstrap (5.3) ==> (framework of CSS) 1 line of code
+        Javascript ==> to interact with the web page (validation) 15 line code
+            React (v18) ==> Library ==> 3 to 5 (validation)
+
+
+BackEnd ==> Working on server (Server Programming)
+        Node JS (v18) ==> Runtime environnement (for javascript code)
+                ==> Create a server (file uploading) ==> 30 line
+                Express JS (v4+) ==> Node JS framework ==> 5 to 10
+
+Database ==> Working on data (store the data)
+        Mongodb (v6) ==> Store / Update / read / delete / combine multiple data
+
+
+Assignment ==>
+Mini Projects ==>
+Major project ==> Zomato Clone
+
+Payment Gateway 
+
+Deployment Process (Upload application cloud)
+
+Training Session ==> Sat & Sunday form 5 pm to 7.00 pm 
+Mentor ==> Web (6 pm to 8 pm)
+
+framework ==> Collection Library 
+
+Library ==> collection function
+
+function ==> set of code to perform a operation
+
+
