@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <title>User Registration</title>
+  </head>
+  <body>
+    <!-- reg form 
+            full name
+            mobile number
+            email id
+            gender
+            city
+            address
+            pin code
+            dob 
+        -->
+    <form>
+      <fieldset>
+        <legend>User Registration</legend>
+        <div>
+          <label for="">Full Name</label>
+          <input type="text" placeholder="Enter full Name" />
+        </div>
+        <div>
+          <label for="mobile">Mobile</label>
+          <input id="mobile" type="number" placeholder="Enter Mobile" />
+        </div>
+        <div>
+          <label for="">Email</label>
+          <input type="email" placeholder="Enter Email IO" />
+        </div>
+        <div>
+          <label for="">Gender</label>
+          <div>
+            <input type="radio" id="male" name="gender" />
+            <label for="male">Male</label>
+          </div>
+          <div>
+            <input type="radio" id="female" name="gender" />
+            <label for="female">Female</label>
+          </div>
+          <div>
+            <input type="radio" id="other" name="gender" />
+            <label for="other">Other</label>
+          </div>
+        </div>
+        <div>
+          <label for="">Address</label>
+          <textarea rows="3"></textarea>
+        </div>
+        <div>
+          <label for="">Date Of Birth</label>
+          <input type="date" />
+        </div>
+        <div>
+          <label for="abc">City</label>
+          <select id="abc">
+            <option>--- select city ---</option>
+            <option>Pune</option>
+            <option>Nashik</option>
+            <option>Surat</option>
+            <option>Indore</option>
+          </select>
+        </div>
+        <div>
+          <label for="">Upload Resume</label>
+          <input type="file" multiple />
+        </div>
+        <div>
+          <input type="checkbox" checked disabled />
+          <label for="">I agree to registered</label>
+        </div>
+        <button>Submit</button>
+        <button type="reset">Reset</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
