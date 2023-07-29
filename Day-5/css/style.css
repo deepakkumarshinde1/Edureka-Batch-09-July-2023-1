@@ -1,0 +1,31 @@
+/* element selector */
+/* h1 {
+  background-color: red;
+} */
+
+/* 
+    element selector h1  h2 h3
+    id selector  #idName  #id-name #id_name
+    class selector .className  .class-name .class_name
+    group selector
+    universal selector
+
+
+    id="header-id"
+    id="header_id"
+    id="headerId"
+*/
+
+/* id selector */
+#green-color {
+  background-color: green;
+}
+
+/*  class selector */
+.bg-red {
+  background-color: red;
+}
+
+.text-white {
+  color: white;
+}

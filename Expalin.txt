@@ -119,6 +119,13 @@ in html 3 ways to write a css
         style="background-color: red;"
         attr = "property : value"
         property are predefined
+        style a single element uniquely
 
     internal css ==> <style> is an element
+        we can design only single page uniquely
+
     external ==> style.css  is an file
+        style multiple web page
+
+
+selectors
