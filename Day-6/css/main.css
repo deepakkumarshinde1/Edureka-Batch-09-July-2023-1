@@ -1,0 +1,88 @@
+/* universal */
+* {
+  margin: 0;
+  /* box-sizing: border-box; */
+  box-sizing: border-box;
+}
+
+/* element selector */
+/* id selector */
+/* class selector */
+
+/* class selector 99% */
+
+/* box model property */
+
+/* 
+    width
+    height
+    padding => provide a space inside element
+    border
+    margin ==> provide a space outside element  
+*/
+/* unites in CSS
+    px => pixel
+    % => percent
+
+    em => emphasis
+    rem => root emphasis
+    vh => viewport height
+    vw => viewport width
+*/
+/* create as box */
+.box {
+  /* background-color: red;
+  color: white; */
+  width: 200px;
+  height: 200px;
+  /* padding: 20px; top bottom left right */
+  padding: 10px 5px; /* top-bottom left-right */
+  padding: 10px 20px 3px; /* top left-right bottom */
+  padding: 10px 20px 30px 40px; /* top right bottom left */
+
+  /* only for once side */
+  /* padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 40; */
+
+  /* border */
+
+  /* border-width: 10px;
+  border-style: solid;
+  border-color: red; */
+
+  /* short hand of bordered */
+  border: 2px solid green;
+
+  /* border-left: 2px solid black;
+  border-right: 2px dotted green; */
+
+  /* margin: 10px;  top bottom left right  */
+  margin: 10px 5px; /* top-bottom left-right*/
+  margin: 10px 5px 2px; /* top  left-right bottom*/
+  margin: 10px 5px 2px 1px; /* top right bottom left*/
+
+  /* margin-top: 10px;
+  margin-bottom: 10px; */
+}
+
+.sizing {
+  background-color: red;
+  height: 200px;
+  width: 200px;
+  padding: 20px;
+  border: 10px solid black;
+}
+
+/* area of div */
+/* 200x200 */
+
+/* width = 200 
+    left-padding = 20
+    right-padding = 20
+    left-border = 10
+    right-border = 10 
+
+    260px
+*/

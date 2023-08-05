@@ -128,4 +128,27 @@ in html 3 ways to write a css
         style multiple web page
 
 
-selectors
+inline element don't support height and width
+inline element can set next each other
+
+block element support height anf width
+inline element can't set next each other
+
+display:block , inline
+
+inline-block ==> design layout
+gird ==> design layout
+flexBox (2023) ==> design layout
+
+flex-parent
+    display:flex
+    flex-direction:row/column (row)
+    flex-warp
+    
+    justify-content:(horizontally) flex-start, flex-end, center, space-between , space-around, space-evenly
+    
+    align-items (single line):(vertically)  stretch, flex-start , center , flex-end
+    align-content (multi line)  flex-start, flex-end, center, space-between , space-around, space-evenly
+
+child-child
+

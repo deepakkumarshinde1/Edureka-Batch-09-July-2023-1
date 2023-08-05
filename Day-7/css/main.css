@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.h1-block {
+  background-color: green;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+}
+.span-inline {
+  background-color: red;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  vertical-align: top;
+}
