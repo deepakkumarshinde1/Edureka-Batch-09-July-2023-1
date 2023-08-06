@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+button,
+input {
+  font-family: Poppins;
+}
+
+.main-section {
+  border: 1px solid black;
+  height: 70vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+/*  flex-direction: row;
+    justify-content works horizontally  (left-right)
+    align-items works vertically (top-bottom)
+*/
+
+/*  flex-direction: column;
+    justify-content works vertically (top-bottom) 
+    align-items works horizontally  (left-right)
+*/
+
+.main-section-header {
+  /* background-color: red; */
+  width: 100%;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+}
+
+.create-account {
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+.brand-logo {
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  color: red;
+
+  /* make a content to center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  /* font property */
+  font-size: 4rem;
+  /* rem ==> root emphasis
+     2rem = 32px
+     1rem = 16px
+     0.5 = 8px 
+     0.25 = 4px
+  */
+  font-weight: bold;
+  /* font-style: italic; */
+}
+
+.main-section-text {
+  font-size: 2rem;
+  margin: 1rem 0px;
+  font-weight: bold;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: yellow; */
+  width: 50%;
+}
+
+.input {
+  outline: none;
+  border-radius: 0px;
+  border: none;
+  padding: 10px;
+}
+
+.location-search {
+  width: 40%;
+}
+
+.restaurant-search {
+  background-color: white;
+  width: 58%;
+}
+
+.restaurant-search > input {
+  width: 80%;
+}
+
+.restaurant-search > span {
+  color: black;
+}
