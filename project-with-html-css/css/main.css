@@ -10,15 +10,28 @@ button,
 input {
   font-family: Poppins;
 }
+body {
+  background-color: #fbfbfb;
+}
 
 .main-section {
   border: 1px solid black;
   height: 70vh;
-  background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
+
+  /* single */
+  /* background-color: black; */
+  /* mutil colors */
+  /* background: linear-gradient(45deg, red 0% 10%, magenta 10% 90%, red 90% 100%); */
+  /* images */
+  background-image: linear-gradient(transparent, #170505dc),
+    url(../images/main-bg.png);
+  background-size: 100%; /* width height */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /*  flex-direction: row;
@@ -110,4 +123,70 @@ input {
 
 .restaurant-search > span {
   color: black;
+}
+
+.search-icon {
+  margin: 0px 10px;
+  color: #070726;
+}
+
+.d-none {
+  display: none;
+}
+
+/* section-2 */
+.meal-type {
+  /* background-color: red; */
+  width: 80%;
+  margin: auto;
+  padding-top: 32px;
+}
+
+.meal-type-title {
+  color: #070726;
+}
+
+.meal-type-sub-title {
+  color: gray;
+}
+
+.meal-type-list {
+  margin-top: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.meal-type-list-item {
+  display: flex;
+  /* background-color: red; */
+  /* border: 1px solid black; */
+  width: 32%;
+  height: 25vh;
+  margin-bottom: 16px;
+
+  /* shadow */
+  box-shadow: 0px 0px 5px gray;
+  /* x-axis y-axis  color  */
+  /* x-axis y-axis blur scale color */
+  /* x-axis (left (-) / right (+)) */
+  /* y-axis (top (-) / bottom (+) */
+}
+
+.list-item-image {
+  width: 45%;
+}
+
+.list-item-content {
+  padding: 20px;
+  background-color: white;
+}
+
+.list-item-content-title {
+  color: #070726;
+}
+
+.list-item-content-sub-title {
+  font-size: 12px;
+  color: gray;
 }
