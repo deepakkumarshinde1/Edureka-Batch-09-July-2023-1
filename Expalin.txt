@@ -152,3 +152,72 @@ flex-parent
 
 child-child
 
+-------------------------------- Bootstrap 5+ -----------------------------
+Bootstrap is a framework ==> collection library ==> collection function logic
+    collection of predefine css classes
+    we can create a awesome designs
+
+    how to install/add bootstrap in project
+        by downloading bootstrap
+        by online link (CDN link)
+
+    # color in bootstrap
+        greenish ==> success
+        reddish ==> danger
+        golden-yellow ==> warning
+        blue-green ==> info
+        gray ==> secondary
+        light-gray ==> light
+        white ==> white
+        black ==> dark
+
+        button ===> btn-colorName ==> btn-success
+        text ==> text-colorName ==> text-danger
+        background ==> bg-colorName ==> bg-success
+        table ==> table-colorName ==> table-success
+
+    # container 
+        to reset props in 
+        page must have at-list 1 container
+
+        container ==> 80%
+        container-fluid ==> 100%
+
+    # grid in css
+        gird ===> 12 parts  ==> row
+            col-7
+
+     # buttons 
+            btn , btn-colorName , btn-sm , btn-large
+
+    # margin
+        m-auto ==> as per left-right-top-bottom space
+        0 => 0px , 1 => 4px , 2 =>  8px
+        3 => 16px, 4 => 32px , 5 => 48px
+
+        m-0 ... m-5 => top/bottom/left/right
+        my-0 ... my-5 => top/bottom
+        mx-0 ... mx-5 => left/right
+        mt-0 ... mt-5 => top
+        mb-0 ... mb-5 => bottom
+        ms-0 ... ms-5 => left (start)
+        me-0 ... me-5 => right (start)
+
+    # padding
+        0 => 0px , 1 => 4px , 2 =>  8px
+        3 => 16px, 4 => 32px , 5 => 48px
+
+        p-0 ... p-5 => top/bottom/left/right
+        py-0 ... py-5 => top/bottom
+        px-0 ... px-5 => left/right
+        pt-0 ... pt-5 => top
+        pb-0 ... pb-5 => bottom
+        ps-0 ... ps-5 => left (start)
+        pe-0 ... pe-5 => right (end)
+        
+    
+    # typography
+   
+
+    # form
+    # flex in bootstrap
