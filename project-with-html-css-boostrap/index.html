@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- set a page for responsive logic -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zomato Search Page</title>
     <!-- bootstrap  5.3 CDN Link-->
     <link
@@ -9,7 +11,93 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="/images/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/images/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/images/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/images/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/images/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/images/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/images/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/images/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/images/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/images/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="/images/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- favicon end -->
   </head>
   <body class="bg-light">
     <main class="container-fluid">
@@ -114,7 +202,83 @@
                 </div>
               </div>
             </section>
-            <section class="col-8 bg-warning">Restaurants</section>
+            <section class="col-8">
+              <section class="shadow-sm bg-white p-3 px-4 mb-3">
+                <section class="d-flex gap-3 align-items-center">
+                  <img
+                    src="./images/meal-type.png"
+                    alt=""
+                    class="restaurant-image"
+                  />
+                  <section>
+                    <p class="fs-3 fw-bold text-dark-blue">
+                      The Big Chill Cakery
+                    </p>
+                    <p class="fw-bold text-dark-blue">FORT</p>
+                    <p class="text-muted">
+                      Shop 1, Plot D, Samruddhi Complex, Chincholi …
+                    </p>
+                  </section>
+                </section>
+                <hr />
+                <section class="d-flex gap-5">
+                  <section>
+                    <p>CUISINES:</p>
+                    <p>COST FOR TWO:</p>
+                  </section>
+                  <section class="fw-bold">
+                    <p>Bakery</p>
+                    <p>₹700</p>
+                  </section>
+                </section>
+              </section>
+              <section class="shadow-sm bg-white p-3 px-4 mb-3">
+                <section class="d-flex gap-3 align-items-center">
+                  <img
+                    src="./images/meal-type.png"
+                    alt=""
+                    class="restaurant-image"
+                  />
+                  <section>
+                    <p class="fs-3 fw-bold text-dark-blue">
+                      The Big Chill Cakery
+                    </p>
+                    <p class="fw-bold text-dark-blue">FORT</p>
+                    <p class="text-muted">
+                      Shop 1, Plot D, Samruddhi Complex, Chincholi …
+                    </p>
+                  </section>
+                </section>
+                <hr />
+                <section class="d-flex gap-5">
+                  <section>
+                    <p>CUISINES:</p>
+                    <p>COST FOR TWO:</p>
+                  </section>
+                  <section class="fw-bold">
+                    <p>Bakery</p>
+                    <p>₹700</p>
+                  </section>
+                </section>
+              </section>
+              <section>
+                <ul
+                  class="list-unstyled d-flex justify-content-center gap-4 zomato-paging"
+                >
+                  <li>
+                    <span class="fa fa-angle-left"></span>
+                  </li>
+                  <li class="zomato-paging-active">1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                  <li>
+                    <span class="fa fa-angle-right"></span>
+                  </li>
+                </ul>
+              </section>
+            </section>
           </section>
         </section>
       </section>

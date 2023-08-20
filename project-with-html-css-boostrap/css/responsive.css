@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* desktop till 1080px and default*/
+.box {
+  width: 100vw;
+  height: 100vh;
+  background-color: green;
+}
+
+/* laptop 1080px to 768px */
+@media screen and (max-width: 1080px) and (min-width: 768px) {
+  .box {
+    background-color: orangered;
+  }
+}
+
+/* table 768px to 600px*/
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  .box {
+    background-color: magenta;
+  }
+}
+
+/* table 768px to 600px*/
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  .box {
+    background-color: magenta;
+  }
+}
+
+/* mobile 600px*/
+@media screen and (max-width: 600px) {
+  .box {
+    background-color: peru;
+  }
+}

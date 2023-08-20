@@ -56,3 +56,10 @@ shadows
     .shadow-sm
     .shadow-lg
     .shadow-none
+
+free => .col-12 (all device)
+extra-extra-large => .col-xxl-12
+extra-large => .col-xl-12
+large => .col-lg-12
+medium => .col-md-12
+small => .col-12 or col-sm-12
