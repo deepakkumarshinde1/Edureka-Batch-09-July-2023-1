@@ -1,0 +1,6 @@
+comment 
+    // single
+    /* multi line */
+
+
+console
