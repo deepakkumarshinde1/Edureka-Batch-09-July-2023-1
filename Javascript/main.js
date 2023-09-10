@@ -1,18 +1,48 @@
-// DOM is document object model
-// make connection in html & javascript we a dom
+let inputOne = document.querySelector("#input-1");
+let inputTwo = document.querySelector("#input-2");
+let calcType = document.querySelector("#calc-type");
+let textArea = document.querySelector("#textArea");
+let ulList = document.querySelector("#ul-list");
+let historyList = [];
 
-// console.log(document);
-// dom methods
-// getElementById
-// getElementsByClassName
-// getElementsByTag
+calcType.addEventListener("change", function () {
+  let valueOne = Number(inputOne.value);
+  let valueTwo = Number(inputTwo.value);
+  let type = calcType.value;
+  let result = null;
 
-// querySelector
-// querySelectorAll
+  switch (type) {
+    case "+":
+      result = valueOne + valueTwo;
+      break;
+    case "-":
+      result = valueOne - valueTwo;
+      break;
+    case "/":
+      result = valueOne / valueTwo;
+      result = result.toFixed(2);
+      break;
+    case "*":
+      result = valueOne * valueTwo;
+      break;
+    case "%":
+      result = valueOne % valueTwo;
+      break;
+  }
 
-// let h1Elements = document.querySelectorAll("h1"); // list
-// console.log(h1Elements);
+  //  string template literals
+  let text = `Result of ${valueOne} ${type} ${valueTwo} is ${result}`;
+  textArea.innerHTML = text;
 
-let h1Element = document.querySelector("#changeText"); // single element
-console.log(h1Element.innerHTML); // read element
-h1Element.style.color = "red";
+  let history = `${valueOne} ${type} ${valueTwo} = ${result}`;
+  historyList.unshift(history);
+  printHistory();
+});
+
+function printHistory() {
+  let list = historyList.map(function (value) {
+    return `<li>${value}</li>`;
+  });
+  list = list.join("");
+  ulList.innerHTML = list;
+}
