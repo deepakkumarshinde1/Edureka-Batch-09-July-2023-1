@@ -1,0 +1,22 @@
+[
+  {
+    "location": "Mumbai",
+    "location_id": 1
+  },
+  {
+    "location": "Pune",
+    "location_id": 2
+  },
+  {
+    "location": "Nagpur",
+    "location_id": 3
+  },
+  {
+    "location": "Surat",
+    "location_id": 4
+  },
+  {
+    "location": "Mumbai",
+    "location_id": 5
+  }
+]

@@ -1,0 +1,36 @@
+database
+    show dbs
+    use batch09July
+    db.dropDatabase()
+
+db --> its a object  which points to current database
+collection commands
+    show collections
+    db.createCollection('collectionName')
+    db.collectionName.drop()
+
+document commands
+    document is a BSON Structure (Binary JSON)
+
+    db.collectionName.insertOne({...})
+    db.collectionName.insertMany([{...},{...},{...}])
+
+    read record
+     db.collectionName.find()   
+     db.collectionName.find({gender: 'Female'})
+     db.collectionName.find({gender: 'Female'},{first_name:1,last_name:1})
+         db.collectionName.find().count()
+          db.collectionName.find().limit()  
+
+
+Object ID (Primary) not be duplicate & not null
+    65196c27 9271845530 9de4c2  ==> 12  byte i.e 24 char
+
+
+01/01/1970  ==> 1/10/2023
+
+    A 4-byte timestamp, representing the ObjectId's creation, measured in seconds since the Unix epoch.
+
+    A 5-byte random value generated once per process. This random value is unique to the machine and process.
+
+    A 3-byte incrementing counter, initialized to a random value.

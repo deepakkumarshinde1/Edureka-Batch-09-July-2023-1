@@ -1,0 +1,25 @@
+locations
+    GET /get-locations-list
+
+restaurants
+    GET /get-restaurant-list-by-location-id
+    GET /get-restaurant-details-by-id
+
+menu_items
+    GET /get-menu-items-by-restaurant-id
+
+meal_types
+    GET /get-meal-type-list
+
+users
+    POST /create-user-account
+    POST /user-login
+
+orders
+    POST /save-user-order
+
+POST /create-order-id
+POST /verify-payment
+
+
+POST /filter
