@@ -44,3 +44,25 @@ module.exports.getMenuItemsByRestaurantId = async (request, response) => {
     result,
   });
 };
+
+module.exports.filter = async (request, response) => {
+  let { location, meal_type } = request.body;
+  let filter = {};
+
+  if (location !== undefined) filter["location_id"] = location;
+  if (meal_type !== undefined) filter["mealtype_id"] = meal_type;
+
+  let result = await RestaurantModel.find(filter, {
+    name: 1,
+    city: 1,
+    locality: 1,
+    image: 1,
+    mealtype_id: 1,
+    cuisine: 1,
+    min_price: 1,
+  });
+  response.send({
+    status: true,
+    result,
+  });
+};

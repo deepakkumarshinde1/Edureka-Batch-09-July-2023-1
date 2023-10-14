@@ -6,6 +6,11 @@ const app = express();
 const PORT = 3030;
 const MONGODB_URI = `mongodb://127.0.0.1:27017/batch09July`;
 
+// post type data is disabled in express
+// we need to enable it
+app.use(express.json()); // json format
+app.use(express.urlencoded({ extended: false })); // form-data and other formarts
+
 app.use("/api", AppRoutes);
 
 mongoose
