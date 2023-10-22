@@ -1,0 +1,102 @@
+React is library (UI)
+
+MVC Model View Controller
+API (Model and Controller)
+UI (View)
+    React (Project Web, Learn Mobile App)
+
+    NPX --> Node Package Execute 
+        Download ---> Install ---> Remove
+
+    create-react-app (create basic react app) 20%
+
+    npx create-react-app <project-name>
+
+    who app name must be ?
+
+    best practice
+        app_name
+        app-name
+
+    don't use it 
+        App-Name
+        APP-NAME
+        App_name
+        APP_NAME
+
+public 
+    all images
+    index.html
+    favicon
+
+src
+    all css file
+    all js file
+    all background images
+    testing files
+    all fonts
+
+Package.json 
+    main project conf files
+
+
+App.js --> Component
+index.js ---> Entry File
+
+Virtual DOM
+    --> Logical Layout Like Real DOM
+    --> All Controls are with Virtual DOM
+    --> App Performance Increases
+    --> Project Upgrade is simple (v17) ----- to ---> (v18)
+
+
+Component (App.js)
+    # Component is a basic building block of your application
+    # React project always build on component.
+    # Class Component (Older project)
+    # Function Component (New Project)
+
+In Component We have HTML like Code 
+    JSX --> Javascript XML
+    JSX must have only one parent as element or <></>
+    JSX class --> ClassName
+    JSX for ---> htmlFor
+    IN JSX all the element must be get close
+    <input />
+    <hr />
+    <br />
+    <p> </p>
+    style={{ backgroundColor: "red" }}
+    
+
+Bootstrap --> CDN
+
+HTML Zomato clone integration
+HTML file
+CSS file
+images
+
+
+
+Component
+    state  
+        ---> handel a component data
+        ---> every component has there own state
+        ---> when state data changes component will get re-render
+        ---> change  state data (state is mutable in in nature)
+    props 
+        ---> pass a data form parent component to child component
+        ---> props read only (immutable in nature)
+
+Events in component
+    function 
+            hooks 
+                are function in react to handel complex orations
+                hook always start with "use"
+                useState --> handel state
+    
+            useState accepts data like
+                string , number , boolean , [] , {}
+
+            in return useState gives an array with 2 values
+            [value, UpdateFunction]
