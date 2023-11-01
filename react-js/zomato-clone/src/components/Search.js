@@ -1,4 +1,7 @@
+import { useParams } from "react-router-dom";
+
 const Search = () => {
+  let { meal_id, meal_type_name } = useParams();
   return (
     <>
       <div className="container-fluid">
@@ -17,7 +20,7 @@ const Search = () => {
         {/* <!-- section --> */}
         <div className="row">
           <div className="col-12 px-5 pt-4">
-            <p className="h3">Breakfast Places In Mumbai</p>
+            <p className="h3">{meal_type_name} Places Near-By</p>
           </div>
           {/* <!-- food item --> */}
           <div className="col-12 d-flex flex-wrap px-lg-5 px-md-5 pt-4">

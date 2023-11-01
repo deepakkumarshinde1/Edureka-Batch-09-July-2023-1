@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   let [mealTypes, setMealTypes] = useState([]);
   let [placeHolderText, setPlaceHolderText] = useState("Get a location");
   let [locations, setLocations] = useState([]);
+  let [restaurantList, setRestaurantList] = useState([]);
+  // create instance of navigate
+  let navigate = useNavigate();
   let getMealTypes = async () => {
     try {
       let url = `http://localhost:3030/api/get-meal-type-list`;
@@ -19,6 +23,7 @@ const Home = () => {
   let getLocationList = async () => {
     try {
       setPlaceHolderText("Getting Location list ...");
+      setRestaurantList([]);
       let url = `http://localhost:3030/api/get-locations-list`;
       let response = await fetch(url, { method: "GET" });
       //get data
@@ -27,6 +32,24 @@ const Home = () => {
       setPlaceHolderText("Here is location list");
     } catch (error) {
       setPlaceHolderText("Fail get location, try again");
+    }
+  };
+
+  let getRestaurantListByLocationId = async (id, name, city) => {
+    try {
+      let url = `http://localhost:3030/api/get-restaurant-list-by-location-id/${id}`;
+      let response = await fetch(url, { method: "GET" });
+      //get data
+      let data = await response.json();
+      console.log(data);
+      if (data.result.length === 0) {
+        alert("No restaurant available in this location");
+      }
+      setPlaceHolderText(`${name}, ${city}`);
+      setLocations([]);
+      setRestaurantList(data.result);
+    } catch (error) {
+      console.log(error);
     }
   };
   // call api on component load
@@ -53,23 +76,66 @@ const Home = () => {
               Find the best restaurants, cafés, and bars
             </p>
             <div className="search w-50 d-flex mt-3">
-              <input
-                type="text"
-                className="form-control mb-3 mb-lg-0 w-50 me-lg-3 py-2 px-3"
-                placeholder={placeHolderText}
-                readOnly
-                onFocus={getLocationList}
-              />
-              <div className="w-75 input-group">
-                <span className="input-group-text bg-white">
-                  <i className="fa fa-search text-primary"></i>
-                </span>
+              <section className="w-50 location-list">
                 <input
                   type="text"
-                  className="form-control py-2 px-3"
-                  placeholder="Search for restaurants"
+                  className="form-control mb-3 mb-lg-0 w-100 me-lg-3 py-2 px-3"
+                  placeholder={placeHolderText}
+                  readOnly
+                  onFocus={getLocationList}
                 />
-              </div>
+                <ul className="list-group w-100">
+                  {locations.map((loc) => {
+                    return (
+                      <li
+                        className="list-group-item"
+                        onClick={() =>
+                          getRestaurantListByLocationId(
+                            loc.location_id,
+                            loc.name,
+                            loc.city
+                          )
+                        }
+                        key={loc._id}
+                      >
+                        {loc.name}, {loc.city}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </section>
+              <section className="w-75 location-list">
+                <div className="w-100 input-group">
+                  <span className="input-group-text bg-white">
+                    <i className="fa fa-search text-primary"></i>
+                  </span>
+                  <input
+                    type="text"
+                    className="form-control py-2 px-3"
+                    placeholder="Search for restaurants"
+                    readOnly
+                  />
+                </div>
+                <ul className="list-group w-100">
+                  {restaurantList.map((restaurant) => {
+                    return (
+                      <li className="list-group-item" key={restaurant._id}>
+                        <img
+                          src={`/images/${restaurant.image}`}
+                          alt=""
+                          className="me-2"
+                          style={{
+                            width: "40px",
+                            height: "40px",
+                            borderRadius: "20px",
+                          }}
+                        />
+                        {restaurant.name}, {restaurant.city}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </section>
             </div>
           </section>
         </section>
@@ -84,6 +150,9 @@ const Home = () => {
                 {mealTypes.map((value, index) => {
                   return (
                     <section
+                      onClick={() =>
+                        navigate(`/search/${value.meal_type}/${value.name}`)
+                      }
                       key={value._id}
                       className="px-0 d-flex border border-1 quick-search-item"
                     >

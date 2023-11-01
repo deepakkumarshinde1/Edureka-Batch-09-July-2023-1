@@ -1,0 +1,16 @@
+Set of Component
+    BrowserRouter ==> enable routing in react
+    Routes ==> Collect Multiple routes
+    Route ==> For Single Routing
+        path=""
+        element={<Component />}
+    Navigate
+    Link
+    NavLink
+    Outlet
+
+Set of Hooks
+    useParams
+    useNavigate ==> navigate between pages
+    useSearchParams
+    useOutletContext

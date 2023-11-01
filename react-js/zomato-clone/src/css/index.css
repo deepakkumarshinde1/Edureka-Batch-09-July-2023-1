@@ -1,3 +1,17 @@
+.location-list {
+  position: relative;
+}
+.location-list > ul {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+}
+
+.location-list > ul > li:hover {
+  background-color: rgb(159, 159, 247);
+  cursor: pointer;
+}
+
 .main-section {
   background-color: red;
   height: 70vh;
