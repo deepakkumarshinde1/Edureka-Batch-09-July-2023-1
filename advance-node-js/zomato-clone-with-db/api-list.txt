@@ -25,3 +25,20 @@ POST /create-order-id
 POST /verify-payment
 
 
+
+
+Store and serve data
+
+    Shared Hosting Service
+    MySQL Data server
+
+VSP 
+    servers (multiple shared hosting)
+
+Server
+    aws
+    google
+    azure
+    digital ocean
+
+zero config ===> notify

@@ -46,12 +46,13 @@ module.exports.getMenuItemsByRestaurantId = async (request, response) => {
 };
 
 module.exports.filter = async (request, response) => {
-  let { location, meal_type } = request.body;
+  let { location, meal_type, sort, cuisine_id } = request.body;
   let filter = {};
+  sort = sort === undefined ? 1 : sort;
 
   if (location !== undefined) filter["location_id"] = location;
   if (meal_type !== undefined) filter["mealtype_id"] = meal_type;
-
+  if (cuisine_id !== undefined) filter["cuisine_id"] = { $in: cuisine_id };
   let result = await RestaurantModel.find(filter, {
     name: 1,
     city: 1,
@@ -60,6 +61,8 @@ module.exports.filter = async (request, response) => {
     mealtype_id: 1,
     cuisine: 1,
     min_price: 1,
+  }).sort({
+    min_price: sort,
   });
   response.send({
     status: true,

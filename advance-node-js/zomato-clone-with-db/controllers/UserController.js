@@ -18,7 +18,7 @@ module.exports.createUserAccount = async (request, response) => {
   if (result) {
     response.send({
       status: true,
-      message: `Your registration is done successfully.`,
+      message: `Your registration is done successfully. you can login now`,
     });
   } else {
     response.send({
@@ -29,16 +29,12 @@ module.exports.createUserAccount = async (request, response) => {
 };
 module.exports.userLogin = async (request, response) => {
   let data = request.body;
-  let result = await UserModel.findOne(
-    {
-      email: data.username,
-      password: data.password,
-    },
-    {
-      password: 0,
-      __v: 0,
-    }
-  );
+
+  let result = await UserModel.findOne({
+    email: data.email,
+    password: data.password,
+  });
+
   if (result) {
     let data = {
       name: result.name,
@@ -50,6 +46,7 @@ module.exports.userLogin = async (request, response) => {
     response.send({
       status: true,
       token,
+      message: "Login Successfully",
     });
   } else {
     response.send({

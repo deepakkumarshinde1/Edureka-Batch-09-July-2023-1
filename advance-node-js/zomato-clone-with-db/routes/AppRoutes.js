@@ -2,6 +2,7 @@ const express = require("express");
 const LocationController = require("../controllers/LocationController");
 const RestaurantController = require("../controllers/RestaurantController");
 const UserController = require("../controllers/UserController");
+const PaymentController = require("../controllers/PaymentController");
 
 const AppRoutes = express.Router();
 
@@ -30,5 +31,8 @@ AppRoutes.post("/create-user-account", UserController.createUserAccount);
 AppRoutes.post("/user-login", UserController.userLogin);
 
 AppRoutes.post("/filter", RestaurantController.filter);
+
+AppRoutes.post("/create-order-id", PaymentController.createOrderId);
+AppRoutes.post("/verify-payment", PaymentController.verifyPayment);
 
 module.exports = AppRoutes;

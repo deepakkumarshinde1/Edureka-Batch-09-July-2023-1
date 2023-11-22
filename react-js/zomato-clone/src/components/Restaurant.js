@@ -1,6 +1,9 @@
 import { useParams } from "react-router-dom";
 import Header from "./Header";
 import { useEffect, useState } from "react";
+import axios from "axios";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 
 const Restaurant = () => {
   let { id } = useParams();
@@ -16,8 +19,7 @@ const Restaurant = () => {
 
   let getMenuList = async () => {
     let url = `http://localhost:3030/api/get-menu-items-by-restaurant-id/${id}`;
-    let response = await fetch(url, { method: "GET" });
-    let data = await response.json();
+    let { data } = await axios.get(url);
     setMenu(data.result);
   };
 
@@ -32,19 +34,41 @@ const Restaurant = () => {
     setMenu([...menus]);
   };
 
-  let makePayment = () => {
+  let makePayment = async () => {
+    let url = `http://localhost:3030/api/create-order-id`;
+    let { data } = await axios.post(url, { amount: totalPrices });
+    let { order } = data;
+
     var options = {
       key: "rzp_test_RB0WElnRLezVJ5", // Enter the Key ID generated from the Dashboard
-      amount: totalPrices * 100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-      currency: "INR",
+      amount: order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      currency: order.currency,
       name: "Zomato Clone ",
       description: "Make Payment to get orders",
-      image: "https://example.com/your_logo",
-      order_id: "order_IluGWxBm9U8zJ8", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      handler: function (response) {
-        alert(response.razorpay_payment_id);
-        alert(response.razorpay_order_id);
-        alert(response.razorpay_signature);
+      image:
+        "https://w7.pngwing.com/pngs/176/785/png-transparent-zomato-thumbnail-review-platforms-logos-thumbnail.png",
+      order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+      handler: async function (response) {
+        try {
+          let userOrders = menus.filter((menu) => menu.qty > 0);
+          let sendData = {
+            payment_id: response.razorpay_payment_id,
+            order_id: response.razorpay_order_id,
+            signature: response.razorpay_signature,
+            order: userOrders,
+          };
+          let url = `http://localhost:3030/api/verify-payment`;
+          let { data } = await axios.post(url, sendData);
+
+          if (data.status === true) {
+            alert("Payment done successfully, order saved");
+            window.location.assign("/");
+          } else {
+            alert("Payment fail");
+          }
+        } catch (error) {
+          console.log(error);
+        }
       },
       prefill: {
         name: "Gaurav Kumar",
@@ -81,7 +105,7 @@ const Restaurant = () => {
             <div className="modal-dialog modal-lg " style={{ height: "75vh" }}>
               <div className="modal-content">
                 <div className="modal-body h-75">
-                  {/* <Carousel showThumbs={false} infiniteLoop={true}>
+                  <Carousel showThumbs={false} infiniteLoop={true}>
                     {rDetails.thumb.map((value, index) => {
                       return (
                         <div key={index} className="w-100">
@@ -89,7 +113,7 @@ const Restaurant = () => {
                         </div>
                       );
                     })}
-                  </Carousel> */}
+                  </Carousel>
                 </div>
               </div>
             </div>
